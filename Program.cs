@@ -19,7 +19,7 @@ class Program
 
         for (int i = 1; i < 4; i++)
         {
-            inputNums[i - 1] = captureInput(i, inputNums);
+            inputNums[i - 1] = CaptureInput(i, inputNums);
             values += inputNums[i - 1] + (i == 3 ? "" : " + ");
         }
         Console.WriteLine("Sum of values \t: " + values + " = " + inputNums.Sum());
@@ -32,7 +32,7 @@ class Program
     /// Continuously asks for input until a valid integer is provided.
     /// Displays error messages for invalid inputs and allows retry.
     /// </summary>
-    public static int captureInput(int i, int[] inputNums)
+    public static int CaptureInput(int i, int[] inputNums)
     {
         int result = 0;
         bool validInput = false;
